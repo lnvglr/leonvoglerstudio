@@ -6,11 +6,13 @@
 	font-family: "Gramatika";
 	src: url("/fonts/Gramatika-Regular.woff2") format("woff2");
 	font-weight: normal;
+  font-display: swap;
 }
 @font-face {
-	font-family: "Gramatika";
+  font-family: "Gramatika";
 	src: url("/fonts/Gramatika-Bold.woff2") format("woff2");
 	font-weight: bold;
+  font-display: swap;
 }
 
 :is(h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, pre, hr, table, dl) + :is(h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, pre, hr, table, dl) {

@@ -1,24 +1,46 @@
 <template>
   <main>
     <Code class="mx-5" />
-    <div class="flex flex-col sm:flex-row gap-y-5 gap-x-24 w-full overflow-auto p-5 my-12">
-      <div v-for="(image, i) in images" :key="i" class="flex flex-col gap-2 shrink-0">
+    <div
+      class="flex flex-col sm:flex-row gap-y-5 gap-x-24 w-full overflow-auto p-5 my-12"
+    >
+      <div
+        v-for="(image, i) in images"
+        :key="i"
+        class="flex flex-col gap-2 shrink-0"
+      >
         <NuxtImg
           :src="image.src"
           sizes="480px xs:720px sm:1080px md:1440px lg:100vw"
           quality="70"
           format="webp"
           :alt="image.alt"
-          loading="lazy"
+          :loading="i === 0 ? 'auto' : 'lazy'"
           class="rounded-xl bg-stone-50 sm:h-[960px] sm:max-h-[60vh]"
+          width=""
           @load="image.loaded = true"
         />
-        <span v-if="image.loaded" class="leading-none">{{ image.description }}</span>
+        <span v-if="image.loaded" class="leading-none">{{
+          image.description
+        }}</span>
       </div>
     </div>
   </main>
 </template>
 <script setup lang="ts">
+useHead({
+  htmlAttrs: {
+    lang: 'en-US',
+  },
+})
+useSeoMeta({
+  title: 'Studio Leon Vogler',
+  ogTitle: 'Studio Leon Vogler',
+  description:
+    'Leon Vogler is a developer and designer for in Vue, React, TypeScript.',
+  ogDescription:
+    'Leon Vogler is a developer and designer for in Vue, React, TypeScript.',
+})
 const images = ref([
   {
     src: 'img/File0196.webp',
