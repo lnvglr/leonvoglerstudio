@@ -7,6 +7,10 @@
       50968 Köln</p>
 
     <h2 class="font-bold">Contact:</h2>
-    <p>post[at]leonvogler.de</p>
+    <ClientOnly><a :href="`mailto:${mail}`">{{mail}}</a></ClientOnly>
   </main>
 </template>
+
+<script setup lang="ts">
+const mail = computed(() => 'post@leonvogler.de')
+</script>
