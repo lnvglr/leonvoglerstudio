@@ -1,10 +1,10 @@
 <template>
-  <main class="p-5 max-w-xl">
-    <h1 class="text-xl font-bold mb-5">Legal Notice</h1>
+  <main class="max-w-xl">
+    <h1 class="text-lg sm:text-xl font-bold">Legal Notice</h1>
     <h2>Information according to § 5 TMG</h2>
     <p>Leon Vogler<br />
-      Goltstein St 39<br />
-      50968 Köln</p>
+      Gailhöfe 6<br />
+      88699 Frickingen</p>
 
     <h2 class="font-bold">Contact:</h2>
     <ClientOnly><a :href="`mailto:${mail}`">{{mail}}</a></ClientOnly>
@@ -12,5 +12,5 @@
 </template>
 
 <script setup lang="ts">
-const mail = computed(() => 'post@leonvogler.de')
+const mail = computed(() => 'studio@leonvogler.com')
 </script>

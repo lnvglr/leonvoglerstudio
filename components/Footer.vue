@@ -1,7 +1,7 @@
 <template>
-  <footer role="banner" class="flex flex-col gap-5 p-5 py-10 bg-neutral-100">
+  <footer role="banner" class="flex flex-col gap-5 bg-neutral-100  mix-blend-multiply">
     <nav role="navigation">
-      <ul aria-expanded="false" class="flex items-center gap-3">
+      <ul aria-expanded="false" class="flex flex-col sm:flex-row sm:items-center gap-3">
         <li v-for="(item, i) in menu" :key="i">
           <NuxtLink :to="item.link" class="hover:underline">{{ item.name }}</NuxtLink>
         </li>

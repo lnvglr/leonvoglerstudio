@@ -9,8 +9,8 @@ export default {
   ],
   theme: {
     fontFamily: {
-      sans: ['Gramatika', 'system-ui', 'sans-serif'],
-      body: ['Gramatika', 'system-ui', 'sans-serif']
+      sans: ['Gramatika', 'Heebo', 'system-ui', 'sans-serif'],
+      body: ['Gramatika', 'Heebo', 'system-ui', 'sans-serif']
     },
     extend: {},
   },
