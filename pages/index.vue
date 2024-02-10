@@ -185,7 +185,7 @@ const images = {
       loaded: false,
     },
     {
-      src: 'img/design/zal.png',
+      src: 'img/design/zal.jpg',
       alt: 'A leaking water pipe.',
       description: 'Gjumri, Armenia',
       loaded: false,
@@ -193,25 +193,25 @@ const images = {
   ].sort((a, b) => 0.5 - Math.random()),
   userInterface: [
     {
-      src: 'img/design/character-divesion.png',
+      src: 'img/design/character-divesion.jpg',
       alt: 'A leaking water pipe.',
       description: 'Gjumri, Armenia',
       loaded: false,
     },
     {
-      src: 'img/design/atf.png',
+      src: 'img/design/atf.jpg',
       alt: 'A leaking water pipe.',
       description: 'Gjumri, Armenia',
       loaded: false,
     },
     {
-      src: 'img/design/rightsplus.png',
+      src: 'img/design/rightsplus.jpg',
       alt: 'A leaking water pipe.',
       description: 'Gjumri, Armenia',
       loaded: false,
     },
     {
-      src: 'img/design/vdb.png',
+      src: 'img/design/vdb.jpg',
       alt: 'A leaking water pipe.',
       description: 'Gjumri, Armenia',
       loaded: false,
@@ -222,32 +222,6 @@ const images = {
 const hoverDesignSection = ref<string | false>(
   Object.keys(images)[Math.floor(Math.random() * 2)]
 )
-// const images = ref([
-//   {
-//     src: 'img/File0196.webp',
-//     alt: 'A person waiting for a train.',
-//     description: 'Odessa, Ukraine',
-//     loaded: false,
-//   },
-//   {
-//     src: 'img/IMG_4032.webp',
-//     alt: 'A leaking water pipe.',
-//     description: 'Gjumri, Armenia',
-//     loaded: false,
-//   },
-//   {
-//     src: 'img/File0170.jpg',
-//     alt: 'A person putting clothes on a rack outside a hotel window.',
-//     description: 'Batumi, Georgia',
-//     loaded: false,
-//   },
-//   {
-//     src: 'img/IMG_4612.jpg',
-//     alt: 'A highrise building.',
-//     description: 'Bratislava, Czech Republic',
-//     loaded: false,
-//   },
-// ])
 </script>
 <style scoped>
 .marquee-group {
