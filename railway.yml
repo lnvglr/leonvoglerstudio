@@ -1,0 +1,5 @@
+services:
+  - name: nuxt
+    type: static
+    buildCommand: npm run generate
+    outputDirectory: dist
