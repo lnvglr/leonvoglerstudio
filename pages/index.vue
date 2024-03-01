@@ -11,8 +11,7 @@
           @mouseover="hoverDesignSection = 'editorial'"
           class="text-blue-500 underline-offset-4 hover:text-blue-600"
           :class="{
-            'underline':
-              hoverDesignSection === 'editorial',
+            underline: hoverDesignSection === 'editorial',
           }"
         >
           editorials
@@ -22,8 +21,7 @@
           @mouseover="hoverDesignSection = 'graphic'"
           class="text-blue-500 underline-offset-4 hover:text-blue-600"
           :class="{
-            'underline':
-              hoverDesignSection === 'graphic',
+            underline: hoverDesignSection === 'graphic',
           }"
         >
           graphics
@@ -33,8 +31,7 @@
           @mouseover="hoverDesignSection = 'userInterface'"
           class="text-blue-500 underline-offset-4 hover:text-blue-600"
           :class="{
-            'underline':
-              hoverDesignSection === 'userInterface',
+            underline: hoverDesignSection === 'userInterface',
           }"
         >
           interfaces
@@ -48,10 +45,14 @@
         apply styles.
       </p>
       <p>
-      <Code class="inline" />
+        <Code class="inline" />
       </p>
     </article>
-    <NuxtLink to="mailto:studio@leonvogler.com" class="p-2 py-1 text-blue-500 hover:text-blue-600 border border-current ite rounded mr-auto">Let's collab ❤️</NuxtLink>
+    <NuxtLink
+      to="mailto:studio@leonvogler.com"
+      class="p-2 py-1 text-blue-500 hover:text-blue-600 border border-current ite rounded mr-auto"
+      >Let's collab ❤️</NuxtLink
+    >
     <div
       class="sm:fixed sm:right-[5vw] -mx-5 p-15 sm:w-[640px] max-w-screen sm:max-w-[30vw] md:max-w-[40vw] top-0 max-h-screen duration-1000 overflow-hidden"
       :class="
@@ -130,25 +131,25 @@ const images = {
   editorial: [
     {
       src: 'img/design/03-mo-mockup-chapter-1-scaled.jpg',
-      alt: 'A leaking water pipe.',
-      description: 'Gjumri, Armenia',
+      alt: 'Open book with about military occupations',
+      description: 'Military Occupations',
       loaded: false,
     },
     {
       src: 'img/design/wasted.jpg',
-      alt: 'A person waiting for a train.',
-      description: 'Odessa, Ukraine',
+      alt: 'Open magazin on food waste.',
+      description: 'Wasted',
       loaded: false,
     },
     {
       src: 'img/design/Data_Literacy_Magazine_Mockup.jpg',
-      alt: 'A leaking water pipe.',
-      description: 'Gjumri, Armenia',
+      alt: 'Open booklet on data literacy.',
+      description: 'Data Literacy',
       loaded: false,
     },
     {
       src: 'img/design/data-oil-3.jpg',
-      alt: 'A leaking water pipe.',
+      alt: 'Open page of a seminar paper by Leon on metaphoric visualization of the value of data.',
       description: 'Gjumri, Armenia',
       loaded: false,
     },
@@ -156,78 +157,78 @@ const images = {
   graphic: [
     {
       src: 'img/design/R4-Leon_Vogler-scars_are_proof_you_lived-Text.jpg',
-      alt: 'A leaking water pipe.',
-      description: 'Gjumri, Armenia',
+      alt: 'Text under shattered glass reading: Scars are proof you lived.',
+      description: 'Scars are proof you lived',
       loaded: false,
     },
     {
       src: 'img/design/agfa-3.jpg',
-      alt: 'A leaking water pipe.',
-      description: 'Gjumri, Armenia',
+      alt: 'A disassembled retro camera flash.',
+      description: 'Agfa Flash',
       loaded: false,
     },
     {
       src: 'img/design/goodtogrow.webp',
-      alt: 'A leaking water pipe.',
-      description: 'Gjumri, Armenia',
+      alt: 'Slide showing organic garbage turning to fresh produce.',
+      description: 'Good to Grow',
       loaded: false,
     },
     {
       src: 'img/design/seoul-grotesque-mockup.jpg',
-      alt: 'A leaking water pipe.',
-      description: 'Gjumri, Armenia',
+      alt: 'Poster of a specimen of the typeface Seoul Grotesque.',
+      description: 'Seoul Groteque Specimen',
       loaded: false,
     },
     {
       src: 'img/design/safari.jpg',
-      alt: 'A leaking water pipe.',
-      description: 'Gjumri, Armenia',
+      alt: 'Safari – Polo & Pan / Artbat',
+      description: 'Poster for a concert.',
       loaded: false,
     },
     {
       src: 'img/design/zal.jpg',
-      alt: 'A leaking water pipe.',
-      description: 'Gjumri, Armenia',
+      alt: 'Design progression of a monogramm',
+      description: 'Tsadi, Aleph, Lamed',
       loaded: false,
     },
   ].sort((a, b) => 0.5 - Math.random()),
   userInterface: [
     {
       src: 'img/design/character-divesion.jpg',
-      alt: 'A leaking water pipe.',
-      description: 'Gjumri, Armenia',
+      alt: 'Webapp for typographic discourse',
+      description: 'Character Diversion',
       loaded: false,
     },
     {
       src: 'img/design/atf.jpg',
-      alt: 'A leaking water pipe.',
-      description: 'Gjumri, Armenia',
+      alt: 'Website for design conference',
+      description: 'Attending [to] Futures',
       loaded: false,
     },
     {
       src: 'img/design/rightsplus.jpg',
-      alt: 'A leaking water pipe.',
-      description: 'Gjumri, Armenia',
+      alt: 'Landing page of passenger rights webapp',
+      description: 'RightsPlus Webapp',
       loaded: false,
     },
     {
       src: 'img/design/vdb.jpg',
-      alt: 'A leaking water pipe.',
-      description: 'Gjumri, Armenia',
+      alt: 'Landing page of a webshop',
+      description: 'Flying Wall Configurator',
       loaded: false,
     },
   ].sort((a, b) => 0.5 - Math.random()),
-}
+} as const
 
-const hoverDesignSection = ref<string | false>(
-  Object.keys(images)[Math.floor(Math.random() * 2)]
+const hoverDesignSection = ref(
+  Object.keys(images)[Math.floor(Math.random() * 2)] as keyof typeof images
 )
 </script>
 <style scoped>
 .marquee-group {
   --speed: 50s;
   --offset: calc(-50% - 20px);
-  
+
   /* transform: translateY(0); */
   /* transform: translateY(calc(-50% - 10px)); */
   animation: scroll var(--speed) linear infinite;
@@ -237,24 +238,24 @@ const hoverDesignSection = ref<string | false>(
 }
 @media screen and (max-width: 639px) {
   @keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
+    0% {
+      transform: translateX(0);
+    }
 
-  100% {
-    transform: translateX(var(--offset));
+    100% {
+      transform: translateX(var(--offset));
+    }
   }
-}
 }
 @media screen and (min-width: 640px) {
   @keyframes scroll {
-  0% {
-    transform: translateY(0);
-  }
+    0% {
+      transform: translateY(0);
+    }
 
-  100% {
-    transform: translateY(var(--offset));
+    100% {
+      transform: translateY(var(--offset));
+    }
   }
-}
 }
 </style>
