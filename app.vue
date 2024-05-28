@@ -28,12 +28,16 @@ const route = useRoute()
 const router = useRouter()
 const name = ref('')
 const hue = ref(Math.floor(Math.random() * 360))
+const interval = ref()
 onMounted(async () => {
   await router.isReady()
   name.value = route.name
+  interval.value = setInterval(() => hue.value++, 1000)
+})
+onBeforeUnmount(() => {
+  clearInterval(interval.value)
 })
 watch(route, () => {
   name.value = route.name
 })
-setInterval(() => hue.value++, 1000)
 </script>
