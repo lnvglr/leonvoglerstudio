@@ -186,7 +186,7 @@ const images = {
       loaded: false,
     },
     {
-      src: 'img/design/zal.jpg',
+      src: 'img/design/zal.png',
       alt: 'Design progression of a monogramm',
       description: 'Tsadi, Aleph, Lamed',
       loaded: false,
