@@ -12,5 +12,6 @@
 </template>
 
 <script setup lang="ts">
-const mail = computed(() => 'studio@leonvogler.com')
+const mail = ref()
+onMounted(() => mail.value = 'studio@leonvogler.com')
 </script>
