@@ -17,7 +17,7 @@
   "dependencies": {
     "@nuxt/image": "^1.0.0-rc.2",
     "autoprefixer": "^10.4.16",
-    "floating-vue": "^5.2.2",
+    "floating-vue": "^2.0.0-beta.24",
     "postcss": "^8.4.30",
     "tailwindcss": "^3.3.3"
   }
