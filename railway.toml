@@ -1,5 +1,5 @@
-services:
-  - name: nuxt
-    type: static
-    buildCommand: npm run generate
-    outputDirectory: dist
+[[services]]
+name = "nuxt"
+type = "static"
+buildCommand = "npm run generate"
+outputDirectory = "dist"
