@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   modules: [
     '@nuxt/image',
-    'floating-vue/nuxt'
+    // 'floating-vue/nuxt'
   ],
   postcss: {
     plugins: {

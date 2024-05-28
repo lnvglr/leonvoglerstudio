@@ -10,7 +10,6 @@
       }"
       :style="`filter: hue-rotate(${hue}deg);`"
     />
-    <!-- {{new Date().getTime() % 3}} -->
     <div
       class="flex flex-col min-h-screen p-5 sm:p-10 md:px-20 gap-5 sm:gap-10"
     >
@@ -22,7 +21,6 @@
 </template>
 <script setup>
 import { useRoute, useRouter } from 'vue-router'
-import { onMounted } from 'vue'
 
 const route = useRoute()
 const router = useRouter()

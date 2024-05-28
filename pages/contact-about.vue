@@ -13,8 +13,8 @@
       </p>
       <p>
         I’ve got a wide range of skills that I can draw on, including design
-        expertise, technical proficiency and
-        <ClientOnly>
+        expertise, technical proficiency and multilingual communication.
+        <!-- <ClientOnly>
           <template #fallback> multilingual communication.</template>
           <VTooltip class="inline">
             <button
@@ -29,7 +29,7 @@
               עברית טובה וכיף לי מאד и говорю по-русски, хотя и немного ржаво.
             </template> </VTooltip
           >.
-        </ClientOnly>
+        </ClientOnly> -->
       </p>
     </div>
     <div class="flex items-center gap-3">
