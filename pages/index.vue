@@ -70,7 +70,7 @@
           :key="i"
           class="item flex flex-col gap-2 shrink-0"
         >
-          <NuxtImg
+          <img
             :src="image.src"
             sizes="480px xs:720px sm:1080px md:1440px lg:100vw"
             quality="70"
@@ -95,7 +95,7 @@
         :key="i"
         class="flex flex-col gap-2 shrink-0"
       >
-        <NuxtImg
+        <img
           :src="image.src"
           sizes="480px xs:720px sm:1080px md:1440px lg:100vw"
           quality="70"

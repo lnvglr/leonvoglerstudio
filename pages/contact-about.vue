@@ -33,7 +33,7 @@
       </p>
     </div>
     <div class="flex items-center gap-3">
-      <NuxtImg
+      <img
         src="/img/avatar-leon-vogler.jpg"
         sizes="100px"
         width="100px"
