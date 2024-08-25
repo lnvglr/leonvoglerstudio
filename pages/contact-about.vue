@@ -42,7 +42,7 @@
         format="webp"
         alt="Leon Vogler"
         loading="lazy"
-        class="rounded-full w-16 h-16 sm:w-24 sm:h-24 -ml-2 border border-white"
+        class="rounded-full w-16 h-16 sm:w-24 sm:h-24 -ml-2 border border-white object-cover"
       />
       <div class="flex flex-col flex-gap">
         <p class="font-bold text-lg">Leon Vogler</p>
