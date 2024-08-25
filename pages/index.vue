@@ -50,7 +50,7 @@
     </article>
     <NuxtLink
       to="mailto:studio@leonvogler.com"
-      class="p-2 py-1 text-blue-500 hover:text-blue-600 border border-current ite rounded mr-auto"
+      class="p-2 py-1 text-blue-500 hover:!bg-blue-500 hover:text-white border border-current ite rounded mr-auto"
       >Let's collab ❤️</NuxtLink
     >
     <div
